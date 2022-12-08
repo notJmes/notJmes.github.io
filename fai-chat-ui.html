@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dialogflow Chatbot Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
+  </head>
+  <body>
+    <div class='uk-flex'>
+        <div class="uk-card uk-card-hover uk-card-body" style='margin:100px;'>
+            <h3 class="uk-card-title">Dialogflow Chatbot with NodeJS Webhook Integration</h3>
+            <p>Here is a better interface with more functionalities offered in this chatbot. Especially the satellite imaging function.</p>
+            <p><i>Prompt for satellite: scan [country/city] (or other variations of the prompt)</i></p>
+            <br>
+            <p><i>Click on the agent on the bottom right to start</i></p>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Hurricane-Response"
+      agent-id="2f05e12c-d237-4fbf-8078-9d4d2e363b72"
+      language-code="en"
+    ></df-messenger>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit-icons.min.js"></script>
+</html>
