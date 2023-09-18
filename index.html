@@ -2,28 +2,193 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Dialogflow Chatbot Demo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notJmes</title>
+    <link rel="stylesheet" type="text/css" href="css/minstyle.io.css">
+    <link rel="stylesheet" type="text/css" href="css/textslider.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    <div class='uk-flex'>
-        <div class="uk-card uk-card-hover uk-card-body" style='margin:100px;'>
-            <h3 class="uk-card-title">Dialogflow Chatbot with NodeJS Webhook Integration</h3>
-            <p>Here is a better interface with more functionalities offered in this chatbot. Especially the satellite imaging function.</p>
-            <p><i>Prompt for satellite: scan [country/city] (or other variations of the prompt)</i></p>
-            <br>
-            <p><i>Click on the agent on the bottom right to start</i></p>
+
+    <!-- Nav  -->
+    <div class="ms-menu">
+      <div class="ms-menu-logo">
+          <img src="https://avatars.githubusercontent.com/u/87146892?v=4" style="border-radius: 50%;"/> 
+          <!-- 100 x 100 px -->
+      </div>
+      <nav class="ms-menu-link">
+          <input type="checkbox" id="ms-menu-toggle" />
+          <label for="ms-menu-toggle" class="ms-menu-icon"
+              ><i class="fa fa-bars"></i
+          ></label>
+          <ul>
+              <li><a href="">Home</a></li>
+              <!-- <li><input type="text" placeholder="search" name="" id="" /></li> -->
+          </ul>
+      </nav>
+  </div>
+
+  <!-- Main  -->
+  
+  <div class="container">
+    <div class="ss-spacer"></div>
+    <div class="ms-user">
+            <div class="ms-avatar ms-large">
+                <img
+                    class="ms-avatar-img"
+                    src="https://media.licdn.com/dms/image/D5603AQEfpZGaVJL8pQ/profile-displayphoto-shrink_200_200/0/1666547927253?e=1700697600&v=beta&t=1uVugVq-ANvaB8pL0DiEG2bsZFrtXHP6v1Gts_B1Lj4"
+                    alt="Me"
+                />
+                <span class="ms-status ms-on"></span>
+            </div>
+            <div class="ms-user-info">
+                <p>
+                    <b>Samuel Seah</b><br />
+                    <i>Infosecurity Student</i><br /><br>
+                    <a  class="ms-btn ms-small ms-outline ms-primary" href="https://github.com/notJmes" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                    <a  class="ms-btn ms-small ms-outline ms-primary" href="https://www.instagram.com/sam_captures_" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a  class="ms-btn ms-small ms-outline ms-primary" href="https://www.linkedin.com/in/samuel-seah/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a  class="ms-btn ms-small ms-outline ms-primary" href="mailto: leumashaes@gmail.com" target="_blank"><i class="fab fa-google fa-lg"></i></a>
+                </p>
+            </div>
+            <div class="ms-user-content">
+                <!-- <button class="ms-btn ms-fullwidth">Message</button> -->
+            </div>
+            <div class="ms-user-pined">
+                <!-- <a ><i class="fas fa-cog fa-lg"></i></a> -->
+            </div>
         </div>
+        <div class="ss-spacer"></div>
+        <div class="ms-browser">
+            <div class="ms-tab-browser">
+                <div class="ms-dots">
+                    <div class="ms-dot red"></div>
+                    <div class="ms-dot yellow"></div>
+                    <div class="ms-dot green"></div>
+                    
+                </div>
+                <!-- <div class="ms-uri"><span id="randomtxt"></span>.io</div> -->
+            </div>
+            <div class="ms-content">
+                <div class="slider-wrapper">Currently exploring:
+
+                    <div class="slider">
+                        <div class="slider-text1">Pentesting</div>
+                        <div class="slider-text2">Cloud and Servers</div>
+                        <div class="slider-text3">Machine Learning</div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="ms-card ms-border ms-inline">
+            <div class="row">
+                <div class="ms-card-pic col-md-3">
+                    <a href="#" target="_blank">
+                        <img
+                            src="https://www.zupimages.net/up/22/08/kl57.png"
+                            alt="..."
+
+                        />
+                    </a>
+                </div>
+                <div class="col-md-7">
+                    <div class="ms-card-title">
+                        <h2>IOT Monitoring with Grafana and Nmap</h2>
+                        <span>Servers</span>
+                    </div>
+                    <div class="ms-card-content">
+                        <p>
+                            A Raspberry Pi project that scans for devices on a local network using Nmap and visualises the logs on Grafana
+                        </p>
+                    </div>
+                </div>
+                <div class="ms-card-btn col-md-2">
+                    <a class="ms-btn ms-fullwidth ms-outline ms-primary" href="https://github.com/notJmes/IOT-monitoring-with-grafana-and-nmap" target="_blank">Read</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ms-card ms-border ms-inline">
+            <div class="row">
+                <div class="ms-card-pic col-md-3">
+                    <a href="#" target="_blank">
+                        <img
+                            src="https://www.zupimages.net/up/22/08/kl57.png"
+                            alt="..."
+
+                        />
+                    </a>
+                </div>
+                <div class="col-md-7">
+                    <div class="ms-card-title">
+                        <h2>Elderly Fall Detection with Computer Vision</h2>
+                        <span>Machine Learning</span>
+                    </div>
+                    <div class="ms-card-content">
+                        <p>
+                            This project aimed to be a fall detection and alert system based on machine-learning capabilities. A simple alternative to the attachment of physical devices and sensors on elderly patients with high tendancy of falling and causing harm to themselves.
+                        </p>
+                    </div>
+                </div>
+                <div class="ms-card-btn col-md-2">
+                    <a class="ms-btn ms-fullwidth ms-outline ms-primary" href="https://github.com/notJmes/neural-network-fall-detector" target="_blank">Read</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ms-card ms-border ms-inline">
+            <div class="row">
+                <div class="ms-card-pic col-md-3">
+                    <a href="#" target="_blank">
+                        <img
+                            src="https://www.zupimages.net/up/22/08/kl57.png"
+                            alt="..."
+
+                        />
+                    </a>
+                </div>
+                <div class="col-md-7">
+                    <div class="ms-card-title">
+                        <h2>Web-Scraping Booking Alert Project</h2>
+                        <span>Machine Learning</span>
+                    </div>
+                    <div class="ms-card-content">
+                        <p>
+                            The code provided was made specific to the use-case of my own and would be helpful as an example of a functional API that scrapes a website and alert its user about the latest information through the usage of APIs from other communication platforms.
+                        </p>
+                    </div>
+                </div>
+                <div class="ms-card-btn col-md-2">
+                    <a class="ms-btn ms-fullwidth ms-outline ms-primary" href="https://github.com/notJmes/web-scraping-api-project" target="_blank">Read</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger
-      intent="WELCOME"
-      chat-title="Hurricane-Response"
-      agent-id="2f05e12c-d237-4fbf-8078-9d4d2e363b72"
-      language-code="en"
-    ></df-messenger>
+
+  
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit-icons.min.js"></script>
+  <footer class="ms-footer">
+    <div class="container">
+        <p><b>Samuel Seah</b> - <a href="https://github.com/notJmes">Github</a> - <a href="https://www.linkedin.com/in/samuel-seah/">linkedin</a></p>
+    </div>
+</footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/dark-mode-switcher@0.0.1/dist/dark.min.js"></script>
+  <script src="https://kit.fontawesome.com/19b4d7bd18.js" crossorigin="anonymous"></script>
+    <script>
+        function scramble() {
+            var txt = document.getElementById('randomtxt');
+            var randList = ['ifmmpnfjouifgvuvsf', 'olssvtlpuaolmbabyl', 'jgnnqogkpvjghwvwtg']; //bday?
+            txt.innerText = randList[Math.floor(Math.random()*randList.length)];
+        }
+        
+        // setInterval(scramble, 100)
+
+    </script>
 </html>
+

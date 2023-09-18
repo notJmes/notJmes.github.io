@@ -1,0 +1,37 @@
+.slider-wrapper {
+    display: flex;
+    font-weight: bold;
+    font-size: 2rem;
+    overflow: auto;
+    /* align-items: center; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.slider {
+    height: 50px;
+    padding-left: 15px;
+    overflow: hidden;
+}
+
+.slider div {
+    height: 50px;
+    margin-bottom: 50px;
+    /* padding: 2px 15px; */
+    text-align: center;
+    
+}
+
+.slider-text1 {
+    animation: slide 5s linear infinite;
+}
+
+@keyframes slide {
+    0% {margin-top:-300px;}
+    5% {margin-top:-200px;}
+    33% {margin-top:-200px;}
+    38% {margin-top:-100px;}
+    66% {margin-top:-100px;}
+    71% {margin-top:0px;}
+    100% {margin-top:0px;}
+}
