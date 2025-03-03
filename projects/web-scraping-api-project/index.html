@@ -1,0 +1,1025 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://notjmes.github.io/projects/web-scraping-api-project/">
+      
+      
+        <link rel="prev" href="../Pico-Macro-Deck-Prototype/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>Web-Scraping Booking Alert Project - NotJmes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Code Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#web-scraping-booking-alert-project" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NotJmes" class="md-header__button md-logo" aria-label="NotJmes" data-md-component="logo">
+      
+  <img src="../../assets/img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NotJmes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Web-Scraping Booking Alert Project
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  Updates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Bluetooth-Reset/" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NotJmes" class="md-nav__button md-logo" aria-label="NotJmes" data-md-component="logo">
+      
+  <img src="../../assets/img/logo.png" alt="logo">
+
+    </a>
+    NotJmes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Updates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bluetooth-Reset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bluetooth Reset
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ic-buddy-bot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IC Buddy Bot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../in-the-loop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    In the loop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IOT-monitoring-with-grafana-and-nmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IOT Monitoring / IDS Home Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../neural-network-fall-detector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neural Network Fall Detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pico-Macro-Deck-Prototype/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pico Macro Deck Prototype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Web-Scraping Booking Alert Project
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Web-Scraping Booking Alert Project
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does it function?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#train-of-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train of thoughts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Train of thoughts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querying-of-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Querying of data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-updates-to-the-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sending updates to the user
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does it function?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#train-of-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train of thoughts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Train of thoughts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querying-of-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Querying of data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-updates-to-the-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sending updates to the user
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="web-scraping-booking-alert-project">Web-Scraping Booking Alert Project</h1>
+<p>The code provided was made specific to the use-case of my own and would be helpful as an example of a functional API that scrapes a website and alert its user about the latest information through the usage of APIs from other communication platforms.</p>
+<p>While it was functional, it was hosted on a server at DigitalOcean to constantly query and send updates on a booking situation in a particular website to my mobile phone via Discord for a prompt alert to secure my bookings.</p>
+<p>This use-case can be helpful in school projects that require the concepts of web-scraiping, building of APIs, and integration with other existing APIs. </p>
+<h2 id="how-does-it-function">How does it function?</h2>
+<ol>
+<li>
+<p><strong>discordExtension.py</strong></p>
+<ul>
+<li>Authenticates itself into the targetted website</li>
+<li>Queries website for information</li>
+<li>Sends the information to the user via discord</li>
+</ul>
+</li>
+<li>
+<p><strong>findPracticals.py</strong></p>
+<ul>
+<li>Contains the main functions needed to<ul>
+<li>Authenticate the API script into the targetted website</li>
+<li>Query the website for information</li>
+<li>Attempts a re-login whenever a session is expired</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>html_js_extract.py</strong><ul>
+<li>Utilises Selenium's automated testing to receive a DOM body with a valid Google Captcha key for authentication</li>
+</ul>
+</li>
+<li><strong>pass_from_config.py</strong><ul>
+<li>Functions that parse authentication information from a config file to the main code</li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<h2 id="train-of-thoughts">Train of thoughts</h2>
+<p>The objective of this project was to scrape a booking website of a driving school I was enrolled in to retrieve data on the latest booking slots for driving lessons.</p>
+<p><strong>My problem statement:</strong></p>
+<blockquote>
+<p>It was a hassle to constantly login to the school portal and check on the latest booking slots. Normally, slots would have been taken up by other students by the time I login to see the slots.</p>
+</blockquote>
+<p><strong>The solution:</strong></p>
+<blockquote>
+<p>Automate a script that authenticates me into the portal and query for the latest booking slots before updating me via Discord.</p>
+</blockquote>
+<p>Breaking down the problem, I came to conclusion on the resources I needed:</p>
+<p>All scripts will be written in Python for flexibility and convenience. As for the modules used, I ended up using the following,</p>
+<ul>
+<li>
+<p><strong>Python Requests</strong></p>
+<ul>
+<li>Perform both POST and GET requests programmatically to our target website and store cookies and user data into session objects</li>
+</ul>
+</li>
+<li>
+<p><strong>BeautifulSoup</strong></p>
+<ul>
+<li>Scraping of HTML body from HTTP requests to extract important information such as the request verification token from the HTML body</li>
+</ul>
+</li>
+<li>
+<p><strong>Selenium</strong> </p>
+<ul>
+<li>Automatically flashing our webpage and retrieving a recaptcha token for authentication (it was impossible to retrieve the token from the HTML body via web-scraping or launching the browser in headless mode)</li>
+</ul>
+</li>
+<li>
+<p><strong>Chromedriver.py</strong> </p>
+<ul>
+<li>Ensure that the Chrome drivers used for Selenium was up-to-date</li>
+</ul>
+</li>
+<li>
+<p><strong>Configparser</strong> </p>
+<ul>
+<li>Conveniently set necessary config information, such as that needed to authenticate ourselves into the target website</li>
+</ul>
+</li>
+<li>
+<p><strong>Discord.py</strong> </p>
+<ul>
+<li>A Discord API will be used so that the information retrieved from the website can be sent conveniently to my phone via a channel message</li>
+</ul>
+</li>
+</ul>
+<p>I ended up hosting my script on a Linux Debian server via DigitalOcean. After creating a server instance, I configured a GUI and accessed it via a remote desktop. Although SSH would have been a more practical and secured option, at the time of testing, I needed a GUI to flash my browser and "trick" the recaptcha into giving me an authentication key.</p>
+<h3 id="authentication">Authentication</h3>
+<p>Observing the login form in the webpage's HTML, aside from the login ID and password, two other pieces of information were needed:</p>
+<p>The first was a Request Verification token, which randomly generates in a hidden input field in the login form upon page load. Using the BeautifulSoup library in python, I was able to retrieve the token value to be used in the request payload in order to establish a user session for the program. </p>
+<p>The second information needed was a google Captcha key. This however was very difficult to achieve through the same means as the web-scraping technique used previously. </p>
+<p>Google Captcha key is issued via an external script on the webpage. Thus, using the python get request, it is not possible to retrieve the key value in the DOM body as the script has not been executed. Even rendering the page will not allow the script to retrieve the key since the render function might not support the execution of external scripts or API scripts. Using selenium, the browser driver will be able to load the HTML content after the javascripts have been fully executed, utilizing the capabilities of automated testing.</p>
+<p>However, using headless testing (meaning that the chrome driver of selenium runs in the background), Google Captcha keys appear to be invalid. It may be due to the lack of a "normal" browser for Google to assign cookies or verify the client.</p>
+<p>Thus the final solution is to utilize automated testing from selenium to retrieve the HTML elements after script execution, before passing the retrieved key over to the bot for form validation. The compromise is that the chrome driver window will appear for a second before minimizing and closing after the key has been retrieved.</p>
+<h3 id="querying-of-data">Querying of data</h3>
+<p>After solving the login segment, I had to figure out how the webpage was queried in order to retrieve information on the latest lesson slots. After a lot of research and inspection, it turns out that a POST request is made via Ajax upon a button-click event to be displayed on the webpage. Thus I replicated the request on my script to retrieve the same information.</p>
+<p>The Ajax request submitted the entire HTML form body in its serialized state in order to get the booking information. By process of elimination, I figured out which form data was needed and which one was not in order to get the target information. Eventually, I was able to receive a response with the booking information I needed to be sent to me automatically.</p>
+<h3 id="sending-updates-to-the-user">Sending updates to the user</h3>
+<p>After the information has been retrieved from the website, I created a script that uses the Python Discord API which allows me to create my own Discord bot and set commands and send messages to my server. Thus, when information is received from the website, the bot will update me on the latest booking slots via a text channel. I also created it in a way that the script can be paused or resumed via commands sent by me to the bot.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>I use cookies to recognise your repeated visits and preferences. With your consent, you will be a great help in making my documentation better :)</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          google-analytics
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.path", "search.suggest", "content.code.copy", "content.code.select", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
