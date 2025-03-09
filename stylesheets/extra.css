@@ -5,4 +5,5 @@
 
 [data-md-color-scheme="slate"] h1 {
     color: #ebebeb; /* Change this to your preferred color */
+    text-shadow: 0 0 10px whitesmoke;
 }
