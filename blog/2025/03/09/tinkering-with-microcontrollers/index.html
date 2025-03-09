@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://notjmes.github.io/blog/2025/02/28/hello-everyone-this-is-my-first-post/">
+        <link rel="canonical" href="https://notjmes.github.io/blog/2025/03/09/tinkering-with-microcontrollers/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Hello everyone! This is my first post! - NotJmes</title>
+        <title>Tinkering with Microcontrollers - NotJmes</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hello-everyone-this-is-my-first-post" class="md-skip">
+        <a href="#tinkering-with-microcontrollers" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hello everyone! This is my first post!
+              Tinkering with Microcontrollers
             
           </span>
         </div>
@@ -602,6 +602,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../../projects/Pico-Pager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pico Pager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../../projects/web-scraping-api-project/" class="md-nav__link">
         
   
@@ -668,6 +690,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lcd-displays" class="md-nav__link">
+    <span class="md-ellipsis">
+      LCD Displays
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mini Projects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#telegram-pager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telegram “Pager”
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pico-macro-deck" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pico Macro Deck
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -703,7 +775,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-02-28 00:00:00+00:00" class="md-ellipsis">February 28, 2025</time>
+                        <time datetime="2025-03-09 00:00:00+00:00" class="md-ellipsis">March 9, 2025</time>
                       </div>
                     </li>
                     
@@ -715,7 +787,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -742,7 +814,19 @@
   
 
 
-<h1 id="hello-everyone-this-is-my-first-post">Hello everyone! This is my first post!<a class="headerlink" href="#hello-everyone-this-is-my-first-post" title="Permanent link">&para;</a></h1>
+<h1 id="tinkering-with-microcontrollers">Tinkering with Microcontrollers<a class="headerlink" href="#tinkering-with-microcontrollers" title="Permanent link">&para;</a></h1>
+<p>Over the past few months, I started to purchase a few microcontrollers such as the Raspberry Pico 2 and 2W and the ESP8226 NodeMCU. <!-- more -->
+Having little knowledge about such devices, I started off by flashing Micropython into my Raspberry Pico 2, and following off a video on <em>Bad USBs</em> by <a href="https://www.youtube.com/watch?v=e_f9p-_JWZw">Network Chuck</a>. However, it wasn't something I really needed and I ended up leaving the microcontrollers aside for a while. Eventually I picked it up again as my interest peaked, and I wanted to learn more about interfacing other hardware with these microcontrollers.</p>
+<h2 id="lcd-displays">LCD Displays<a class="headerlink" href="#lcd-displays" title="Permanent link">&para;</a></h2>
+<p>It took me a while to understand the concept of I2C (Inter-Integrated Circuit) and SPI (Serial Peripheral Interface), which are communication protocols for integrating microcontrollers and other peripherals like sensors, diplays and memory devices. I purchased the SH1106 1.3" I2C OLED display from Adafruit and the ST7789 1.3" IPS LCD display with an SPI interface. While working on the ST7889, I also attempted to compile a Micropython firmware for the Raspberry Pico for a native <a href="https://github.com/russhughes/st7789_mpy">ST7789 support</a>.</p>
+<h2 id="mini-projects">Mini Projects<a class="headerlink" href="#mini-projects" title="Permanent link">&para;</a></h2>
+<h3 id="telegram-pager">Telegram “Pager”<a class="headerlink" href="#telegram-pager" title="Permanent link">&para;</a></h3>
+<p><img alt="Pico Pager" src="https://raw.githubusercontent.com/notJmes/Pico-Pager/main/img/no_msg.jpg" />
+While playing around with the Raspberry Pico 2W and the Micropython library, I ran an API  from <a href="https://github.com/jordiprats/micropython-utelegram">Jordi Prats</a> on the microcontroller to receive text messages sent to my Telegram bot, before displaying it on a ST7889 SPI display.</p>
+<p>It was an opportunity to learn the usage of SPI libraries, and even compiling a Micropython firmware with the ST7889 support using its SDK.</p>
+<h3 id="pico-macro-deck">Pico Macro Deck<a class="headerlink" href="#pico-macro-deck" title="Permanent link">&para;</a></h3>
+<p><img alt="Pico Prototype" src="https://raw.githubusercontent.com/notJmes/Pico-Macro-Deck-Prototype/refs/heads/main/img/pico.jpg" />
+I also experimented with the Raspberry Pico 2, which does not have built-in WiFi support, with a Circuitpython firmware. Using Circuitpython’s HID library, I built a simple Macro deck that allows me to send custom keystrokes to the computer connected to it. I used a SH1106 display and some buttons so that I could cycle through which macro I wanted to execute before running. You can see the project <a href="https://notjmes.github.io/projects/Pico-Macro-Deck-Prototype/">here</a>.</p>
 
 
 
