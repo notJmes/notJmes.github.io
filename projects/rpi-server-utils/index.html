@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://notjmes.github.io/projects/neural-network-fall-detector/">
+        <link rel="canonical" href="https://notjmes.github.io/projects/rpi-server-utils/">
       
       
-        <link rel="prev" href="../web-scraping-api-project/">
+        <link rel="prev" href="../neural-network-fall-detector/">
       
       
-        <link rel="next" href="../rpi-server-utils/">
+        <link rel="next" href="../Pico-Pager/">
       
       
       <link rel="icon" href="../../assets/img/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Neural network fall detector - NotJmes</title>
+        <title>Rpi server utils - NotJmes</title>
       
     
     
@@ -75,11 +75,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#how-does-it-work" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Neural network fall detector
+              Rpi server utils
             
           </span>
         </div>
@@ -620,6 +615,28 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../neural-network-fall-detector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neural network fall detector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -630,95 +647,7 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Neural network fall detector
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Neural network fall detector
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-does-it-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      How does it work?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#studying-our-prediction-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Studying our prediction model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#training" class="md-nav__link">
-    <span class="md-ellipsis">
-      Training
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-developments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Future developments
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../rpi-server-utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -728,6 +657,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -780,50 +710,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-does-it-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      How does it work?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#studying-our-prediction-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Studying our prediction model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#training" class="md-nav__link">
-    <span class="md-ellipsis">
-      Training
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-developments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Future developments
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -841,60 +727,15 @@
   
 
 
-<h1>Neural Network Fall Detection</h1>
-<p><i><a href="https://github.com/notJmes/neural-network-fall-detector" target="_blank">Visit Repo</a></i></p>
-<p>This project aimed to be a fall detection and alert system based on machine-learning capabilities. Its concept aimed to be a simple alternative to the attachment of physical devices and sensors on elderly patients with high tendancy of falling and causing harm to themselves. </p>
-<p>While exisiting hardware has remained as a reliable solution in the market, not all medical centres or households are able to afford it for all their patients who need it, and not all patients are medically fit to have such devices around them or attached to them, such as those suffering from dementia with inabilities of voicing out any form of discomfort or pain.</p>
-<h2 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p><a href="https://google.github.io/mediapipe/solutions/pose.html">Mediapipe Pose library</a> is first used to get the coordinates of different points on a body captured within a video input. The following image shows the Pose Landmark Model taken from Mediapipe docs.</p>
-<p><image src="https://mediapipe.dev/images/mobile/pose_tracking_full_body_landmarks.png" width="80%"><br></p>
-<p><em>Pose Landmark Model used to identify the coordinates throughout a subject's body.</em></p>
-</li>
-<li>
-<p>All 33 coordinates are then fed into my prediction model to determine whether our subject is in a fallen state or not.</p>
+<h1>RPI Server Utils</h1>
+<p><i><a href="https://github.com/notJmes/rpi-server-utils" target="_blank">Visit Repo</a></i></p>
 <ul>
-<li>Although 33 coordinates are taken in as our input data, our tensor shape takes in 99 input values since each coordinate has x, y and z values.</li>
-</ul>
-<p><em>What is displayed when a subject falls:</em></p>
-<p><img alt="fall" src="img/fall.png" /></p>
-<p><em>What is displayed when a subject has not fallen:</em></p>
-<p><img alt="no fall" src="img/no_fall.png" /></p>
+<li>
+<p>./i2c - I2C System Info Display</p>
 </li>
 <li>
-<p>The third component is in development where our recepients would be notified should a fall be detected in a live video feed.</p>
+<p>./toggle_fan - Toggle the server fan via Python</p>
 </li>
-</ol>
-<h2 id="studying-our-prediction-model">Studying our prediction model<a class="headerlink" href="#studying-our-prediction-model" title="Permanent link">&para;</a></h2>
-<p>When we retrieve a summary of our fall prediction model, we get the following information:</p>
-<div class="language-text highlight"><pre><span></span><code>Model: &quot;sequential&quot;
-_________________________________________________________________
-Layer (type)                Output Shape              Param #   
-=================================================================
-dense (Dense)               (None, 99)                9900
-
-dense_1 (Dense)             (None, 128)               12800
-
-dense_2 (Dense)             (None, 2)                 258
-
-=================================================================
-Total params: 22,958
-Trainable params: 22,958
-Non-trainable params: 0
-_________________________________________________________________
-</code></pre></div>
-<p>As mentioned above, the 99 input features are the xyz coordinates of each of our 33 identified points on our Pose Landmark model. Thus, that determines our input layer with its given shape.</p>
-<p>As we proceed to the second layer, Sigmoid will be used as our activation function as we require our output for our final layer to be between 0 and 1, as a form of probability for each of our possible outputs <em>(fall or no fall)</em>.</p>
-<p><image src="https://miro.medium.com/max/640/1*Xu7B5y9gp0iL5ooBj7LtWw.png" width="40%"><br></p>
-<p><em>Activation functions in neural networks explained <a href="https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6">here</a></em></p>
-<p>For our final layer, we give it a size of 2, for each of the possible outcomes, whether our subject has fallen or not. Using Numpy, we get the feature with the highest score, which also tells us the output we are looking for.</p>
-<h2 id="training">Training<a class="headerlink" href="#training" title="Permanent link">&para;</a></h2>
-<p>The dataset was trained with two videos, one with myself maneuvering between possible postures after a patient would have fallen on the ground, as well as another one casually walking or bending over, where no fall would have been detected.</p>
-<p>A maximum of 5000 frames were extracted from each video and fed into our Mediapipe Pose detection to retrieve its Pose Landmark values, before being compiled into a bytes file (<em>dataset.bytes</em>). This dataset was then used to build and train our neural network.</p>
-<h2 id="future-developments">Future developments<a class="headerlink" href="#future-developments" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Add code that allows users to be notified of a detected fall, as well as a snapshot of the frame with the predicted fall. This can be acheived through existing open-source APIs such as Discord.</li>
 </ul>
 
 
